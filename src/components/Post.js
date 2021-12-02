@@ -1,18 +1,29 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Image } from "react-bootstrap";
+import placeholder from "../placeholder.jpeg";
+import { Link } from "react-router-dom";
+import heart from "../heart.png";
+import dialog from "../dialog.png";
+import directmessage from "../directmessage.png";
 
 export default function Post() {
   return (
     <Card className="my-3">
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
+        <Card.Title>Username</Card.Title>
+        <Card.Img src={placeholder} />
+        <Card.Link as={Link} to="/">
+          <Image src={heart} width="26px" />
+        </Card.Link>
+        <Card.Link as={Link} to="/">
+          <Image src={dialog} width="22px" />
+        </Card.Link>
+        <Card.Link as={Link} to="/">
+          <Image src={directmessage} width="27px" />
+        </Card.Link>
+
+        <Card.Text>This is the caption of the Image</Card.Text>
         <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
       </Card.Body>
     </Card>
   );
