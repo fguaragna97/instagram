@@ -9,12 +9,8 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Home from "../home.png";
-import messages from "../messages.png";
-import add from "../add.png";
-import compass from "../compass.png";
-import heart from "../heart.png";
-import profile from "../profile.png";
+import { FaRegHeart, FaHome, FaRegComments } from "react-icons/fa";
+import { BsPlusCircle, BsCompass, BsPerson } from "react-icons/bs";
 
 export default function Navigation() {
   return (
@@ -41,23 +37,23 @@ export default function Navigation() {
         <Navbar.Collapse>
           <Nav className="justify-content-end">
             <Nav.Link as={Link} to="/">
-              <Image src={Home} width="25px" />
+              <FaHome size="25px"></FaHome>
             </Nav.Link>
 
             <Nav.Link as={Link} to="/">
-              <Image src={messages} width="25px" />
+              <FaRegComments size="25px"></FaRegComments>
             </Nav.Link>
 
             <Nav.Link as={Link} to="/">
-              <Image src={add} width="25px" />
+              <BsPlusCircle size="25px"></BsPlusCircle>
             </Nav.Link>
 
             <Nav.Link as={Link} to="/">
-              <Image src={compass} width="25px" />
+              <BsCompass size="25px"></BsCompass>
             </Nav.Link>
 
             <Nav.Link as={Link} to="/">
-              <Image src={heart} width="25px" />
+              <FaRegHeart size="25px"></FaRegHeart>
             </Nav.Link>
 
             <Nav.Link as={Link} to="/register">
@@ -65,14 +61,7 @@ export default function Navigation() {
             </Nav.Link>
 
             <NavDropdown
-              title={
-                <Image
-                  className="thumbnail-image"
-                  src={profile}
-                  alt="user pic"
-                  width="20px"
-                />
-              }
+              title={<BsPerson size="25px"></BsPerson>}
               id="basic-nav-dropdown"
             >
               <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
