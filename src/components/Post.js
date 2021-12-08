@@ -2,9 +2,7 @@ import React from "react";
 import { Card, Image } from "react-bootstrap";
 import placeholder from "../placeholder.jpeg";
 import { Link } from "react-router-dom";
-import heart from "../heart.png";
-import dialog from "../dialog.png";
-import directmessage from "../directmessage.png";
+import { FaRegHeart, FaRegComment, FaRegPaperPlane } from "react-icons/fa";
 
 export default function Post() {
   return (
@@ -13,13 +11,13 @@ export default function Post() {
         <Card.Title>Username</Card.Title>
         <Card.Img src={placeholder} />
         <Card.Link as={Link} to="/">
-          <Image src={heart} width="26px" />
+          <FaRegHeart size="23px" color="gray"></FaRegHeart>
         </Card.Link>
         <Card.Link as={Link} to="/">
-          <Image src={dialog} width="22px" />
+          <FaRegComment size="23px" color="gray"></FaRegComment>
         </Card.Link>
         <Card.Link as={Link} to="/">
-          <Image src={directmessage} width="27px" />
+          <FaRegPaperPlane size="23px" color="gray"></FaRegPaperPlane>
         </Card.Link>
 
         <Card.Text>This is the caption of the Image</Card.Text>
